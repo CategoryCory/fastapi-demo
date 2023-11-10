@@ -1,0 +1,14 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:5169/api/movies
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:5169/api/movies/1
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:5169/api/movies/100
+Accept: application/json
