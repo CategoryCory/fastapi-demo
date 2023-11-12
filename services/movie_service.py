@@ -11,7 +11,7 @@ def get_movie_by_id(movie_id: int, db: Session) -> models.Movie | None:
     return db.query(models.Movie).filter(models.Movie.id == movie_id).first()  # type: ignore
 
 
-def add_movie(movie: schemas.MovieCreate, db: Session) -> models.Movie:
+def add_movie(movie: schemas.Movie, db: Session) -> models.Movie:
     db_movie = models.Movie(
         title=movie.title,
         description=movie.description,

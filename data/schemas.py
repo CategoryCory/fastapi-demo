@@ -1,21 +1,14 @@
 from datetime import date
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
+from typing import Optional
 
 
-class MovieBase(BaseModel):
+class Movie(BaseModel):
+    id: Optional[int] = None
     title: str
     description: str
     genre: str
     rating: float
     release_date: date
 
-
-class MovieCreate(MovieBase):
-    pass
-
-
-class Movie(MovieBase):
-    id: int
-
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

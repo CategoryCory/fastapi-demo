@@ -25,7 +25,7 @@ def get_movie_by_id(movie_id: int, db: Session = Depends(get_db)) -> schemas.Mov
 
 
 @router.post('/', response_model=schemas.Movie, status_code=status.HTTP_201_CREATED)
-def add_movie(movie: schemas.MovieCreate, db: Session = Depends(get_db)) -> schemas.Movie:
+def add_movie(movie: schemas.Movie, db: Session = Depends(get_db)) -> schemas.Movie:
     return movie_service.add_movie(movie, db)
 
 
