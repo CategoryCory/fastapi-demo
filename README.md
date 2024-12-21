@@ -1,3 +1,3 @@
 # FastAPI Demo Project
 
-TODO
+TODO: Add setup information
